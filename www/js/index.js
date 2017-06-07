@@ -61,18 +61,7 @@ var app = {
                     };
                     var error = function (e) {
                         console.log('Message Failed:' + e);
-                    };
-                    /*for (var i in result) {
-                        sms.send(result[i].mobile_number, result[i].content, options, function () {
-                            $.ajax({
-                                type: "PUT",
-                                url: "https://sms-a.herokuapp.com/number_list/" + result[i]._id,
-                                success: function (data) {
-                                    console.log('message sent successfully to ' + result[i].mobile_number + ' with content ' + result[i].content);
-                                }
-                            });
-                        }, error);
-                    }*/
+                    };                   
                     result.forEach(function (obj) {
                         sms.send(obj.mobile_number, obj.content, options, function () {
                             $.ajax({
